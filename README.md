@@ -9,6 +9,6 @@ This theme is based on the [agnoster](https://github.com/agnoster/agnoster-zsh-t
 * Follow the prompts (if any)
 * Enjoy!
 
-**Note:** The required [Powerline](https://github.com/powerline/fonts) fonts are already installed. However, f you are using [iTerm2](https://www.iterm2.com/) you might need to set the font manually to any of them.
+**Note:** The required [Powerline](https://github.com/powerline/fonts) fonts are already installed. However, if you are using [iTerm2](https://www.iterm2.com/) you might need to set the font manually to any of them.
 
 ![Manual font setting](./fonts.png)
