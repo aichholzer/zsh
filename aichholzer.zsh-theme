@@ -1,7 +1,6 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 #
-# agnoster's Theme - https://gist.github.com/3712874
-# A Powerline-inspired theme for ZSH
+# aichholzer's Theme
 #
 # # README
 #
@@ -222,7 +221,16 @@ prompt_time() {
 
 # Nodejs version
 prompt_node() {
+  prompt_start green
   right_prompt_segment green black "$(nvm_prompt_info) "
+}
+
+prompt_aws() {
+  AWS_OUT="$(aws_prompt_info)"
+  if [[ -n "$AWS_OUT" ]]; then
+    prompt_start yellow
+    right_prompt_segment yellow black "$AWS_OUT"
+  fi
 }
 
 # Virtualenv: current working virtualenv
@@ -252,23 +260,17 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
-  prompt_context
   prompt_dir
-  prompt_time
-  prompt_git
   prompt_bzr
   prompt_hg
   prompt_end
 }
 
 build_right_prompt() {
-  prompt_start green
   prompt_node
+  prompt_aws
 }
 
 PROMPT='
 %{%f%b%k%}$(build_prompt) '
 RPROMPT='$(build_right_prompt)'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
