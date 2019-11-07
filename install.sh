@@ -7,10 +7,10 @@ PID=$!
 LOOP=1
 while kill -0 $PID 2>/dev/null; do
   printf  "•"
-  sleep 0.03
+  sleep 0.02
   ((LOOP+=1))
   if [ $LOOP == 32 ]; then
-      sleep 0.5
+      sleep 0.35
       echo -ne "\r\033[0K"
       LOOP=1
   fi
