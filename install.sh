@@ -26,11 +26,8 @@ while kill -0 $PID 2>/dev/null; do
 done
 
 sleep 1
+cp -f .zshrc ~/
 cp aichholzer.zsh-theme ~/.oh-my-zsh/themes/
-sed -i -e '/ZSH_THEME=/s/=.*/=\"aichholzer\"/' ~/.zshrc
-sed -i -e '/# COMPLETION_WAITING_DOTS/s//COMPLETION_WAITING_DOTS/' ~/.zshrc
-sed -i -e '/plugins=/s/=.*/=\(git npm node nyan\)/' ~/.zshrc
-
 echo "DEFAULT_USER=$(whoami)" >> ~/.zshrc
 source ~/.zshrc 2>/dev/null
 
