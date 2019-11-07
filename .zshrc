@@ -23,3 +23,12 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(git aws npm osx)
 
 source $ZSH/oh-my-zsh.sh
+
+### NVM
+export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+### PyEnv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
