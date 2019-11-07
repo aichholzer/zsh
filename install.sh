@@ -15,10 +15,10 @@ while kill -0 $PID 2>/dev/null; do
       LOOP=1
   fi
 done
-cd fonts && ./install.sh &>/dev/null
+cd fonts && ./install.sh &>/dev/null && cd ..
 
 echo
-cd .. && rm .zshrc && rm -rf ~/.zsh* ~/.oh-my-zsh
+rm .zshrc && rm -rf ~/.zsh* ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &
 PID=$!
 while kill -0 $PID 2>/dev/null; do
@@ -26,8 +26,8 @@ while kill -0 $PID 2>/dev/null; do
 done
 
 sleep 1
-cp -f .zshrc ~/
-cp aichholzer.zsh-theme ~/.oh-my-zsh/themes/
+cp -f ./zsh/.zshrc ~/
+cp ./zsh/aichholzer.zsh-theme ~/.oh-my-zsh/themes/
 echo "DEFAULT_USER=$(whoami)" >> ~/.zshrc
 source ~/.zshrc 2>/dev/null
 
