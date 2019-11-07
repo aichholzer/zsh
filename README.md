@@ -12,3 +12,5 @@ This theme is based on the [agnoster](https://github.com/agnoster/agnoster-zsh-t
 **Note:** The required [Powerline](https://github.com/powerline/fonts) fonts are already installed. However, if you are using [iTerm2](https://www.iterm2.com/) you might need to set the font manually to any of them.
 
 ![Manual font setting](./fonts.png)
+
+* My preferred font at the moment is; `Meslo LG M DZ for Powerline`, `bold` & size `13`.
