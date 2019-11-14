@@ -28,7 +28,6 @@ done
 sleep 1
 cp ./.zshrc ~/
 cp ./aichholzer.zsh-theme ~/.oh-my-zsh/themes/
-echo "DEFAULT_USER=$(whoami)" >> ~/.zshrc
 source ~/.zshrc 2>/dev/null
 
 cd .. && rm -rf zsh
