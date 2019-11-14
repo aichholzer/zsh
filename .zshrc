@@ -1,4 +1,6 @@
-export ZSH="/Users/Stefan/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
+export UPDATE_ZSH_DAYS=5
+export DEFAULT_USER="$(whoami)"
 
 ZSH_THEME="aichholzer"
 ZSH_THEME_AWS_PREFIX="aws:"
@@ -6,7 +8,6 @@ ZSH_THEME_AWS_SUFFIX=" "
 
 HYPHEN_INSENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"
-export UPDATE_ZSH_DAYS=5
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -30,5 +31,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 ### PyEnv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
