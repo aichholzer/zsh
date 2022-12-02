@@ -114,8 +114,8 @@ prompt_node() {
 prompt_aws() {
   AWS_OUT="$(aws_prompt_info)"
   if [[ -n "$AWS_OUT" ]]; then
-    prompt_start yellow
-    right_prompt_segment yellow black "${AWS_OUT} "
+    prompt_start white
+    right_prompt_segment white black "${AWS_OUT} "
   fi
 }
 
