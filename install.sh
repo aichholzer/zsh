@@ -1,23 +1,6 @@
 #!/usr/bin/env bash
 
 echo
-echo Cloning and installing fonts...
-git clone https://github.com/powerline/fonts.git --depth=1 2>/dev/null &
-PID=$!
-LOOP=1
-while kill -0 $PID 2>/dev/null; do
-  printf  "•"
-  sleep 0.02
-  ((LOOP+=1))
-  if [ $LOOP == 32 ]; then
-      sleep 0.35
-      echo -ne "\r\033[0K"
-      LOOP=1
-  fi
-done
-cd fonts && ./install.sh &>/dev/null && cd ..
-
-echo
 rm -rf ~/.zsh* ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &
 PID=$!
