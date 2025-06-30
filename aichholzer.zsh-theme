@@ -112,7 +112,7 @@ prompt_node() {
 }
 
 prompt_aws() {
-  AWS_OUT="$(aws_prompt_info)"
+  AWS_OUT="$(aws_prompt_info | awk -F'[> <:]+' '{print $3 " | " $5}')"
   if [[ -n "$AWS_OUT" ]]; then
     prompt_start white
     right_prompt_segment white black "${AWS_OUT} "
