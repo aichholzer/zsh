@@ -112,10 +112,10 @@ prompt_node() {
 }
 
 prompt_aws() {
-  AWS_OUT="$(aws_prompt_info)"
-  if [[ -n "$AWS_OUT" ]]; then
+  AWS="${AWS_PROFILE}"
+  if [[ -n "$AWS" ]]; then
     prompt_start white
-    right_prompt_segment white black "${AWS_OUT} "
+    right_prompt_segment white black "${AWS} "
   fi
 }
 
