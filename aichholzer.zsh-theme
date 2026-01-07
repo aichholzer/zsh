@@ -120,7 +120,7 @@ prompt_aws() {
 }
 
 prompt_branch() {
-  GIT_OUT=$(current_branch)
+  GIT_OUT=$(git_current_branch)
   if [[ -n "$GIT_OUT" ]]; then
     PL_BRANCH_CHAR=$'\ue0a0'         # 
     dirty=$(parse_git_dirty)
